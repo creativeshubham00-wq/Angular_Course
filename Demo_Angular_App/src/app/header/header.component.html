@@ -1,0 +1,19 @@
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a href="/">{{ brandName }}</a>
+    </div>
+    
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li *ngFor="let item of navItems">
+          <a [href]="item.link" class="nav-link">{{ item.label }}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <button class="btn-primary">Login</button>
+    </div>
+  </div>
+</header>

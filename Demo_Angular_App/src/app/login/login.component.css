@@ -1,0 +1,127 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Increased height for better centering */
+  padding: 20px;
+  background: #f0f2f5; /* Subtle background to make the card pop */
+}
+
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden; /* Keeps the gradient top flush with corners */
+  box-shadow: 0 15px 35px rgba(118, 75, 162, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Colorful Header Area inside the card */
+.auth-card h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin: 0;
+  padding: 2rem 1rem;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  color: #666;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  padding: 0 2rem;
+}
+
+form {
+  padding: 0 2rem 2.5rem 2rem;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  color: #4b306a; /* Darker purple for readability */
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Colorful Buttons */
+.btn-login {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-login:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn-login:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Success/Logged In State */
+.success-view {
+  padding: 3rem 2rem;
+}
+
+.success-view .avatar {
+  font-size: 4rem;
+  background: #f3f0ff;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+}
+
+.btn-logout {
+  background: transparent;
+  color: #764ba2;
+  border: 2px solid #764ba2;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #764ba2;
+  color: white;
+}

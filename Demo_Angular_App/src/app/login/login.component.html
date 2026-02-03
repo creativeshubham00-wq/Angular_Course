@@ -1,0 +1,32 @@
+<div class="auth-container">
+  <div *ngIf="!isLoggedIn" class="auth-card">
+    <h2>Welcome Back</h2>
+    <p class="subtitle">Please enter your details</p>
+    
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" placeholder="email@example.com">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="••••••••">
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid" class="btn-login">
+        Login
+      </button>
+    </form>
+  </div>
+
+  <div *ngIf="isLoggedIn" class="auth-card success-view">
+    <div class="avatar">👤</div>
+    <h2>Active Session</h2>
+    <p>Logged in as: <strong>{{ userEmail }}</strong></p>
+    
+    <button (click)="onLogout()" class="btn-logout">
+      Log Out
+    </button>
+  </div>
+</div>

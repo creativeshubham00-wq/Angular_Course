@@ -1,0 +1,89 @@
+/* Main Header with a thin gradient top-bar */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-bottom: 3px solid;
+  /* Matches your Footer and Login card gradients */
+  border-image: linear-gradient(to right, #667eea, #764ba2, #00d2ff) 1;
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo with a gradient text effect */
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+/* Navigation Links */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4b306a; /* Deep purple instead of gray */
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Animated underline on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #00d2ff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #764ba2;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Action Button - Matching the Login button style */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px; /* Pill shape for a modern look */
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(118, 75, 162, 0.4);
+}
